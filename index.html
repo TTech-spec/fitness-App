@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ubuntu - Connecting LGBTQIA+ People Across Africa</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="index.css"/>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #ec4899;
+  --background-light: #fdf2f8;
+  --background-dark: #2d1621;
+  --stone-50: #fafaf9;
+  --stone-100: #f5f5f4;
+  --stone-200: #e7e5e4;
+  --stone-300: #d6d3d1;
+  --stone-400: #a8a29e;
+  --stone-500: #78716c;
+  --stone-600: #57534e;
+  --stone-700: #44403c;
+  --stone-800: #292524;
+  --stone-900: #1c1917;
+  --white: #ffffff;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--background-light);
+  color: var(--stone-800);
+  line-height: 1.5;
+}
+
+html.dark body {
+  background-color: var(--background-dark);
+  color: var(--stone-200);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: rgba(253, 242, 248, 0.8);
+  backdrop-filter: blur(8px);
+}
+
+html.dark header {
+  background-color: rgba(45, 22, 33, 0.8);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-icon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--primary);
+}
+
+.logo-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--stone-900);
+}
+
+html.dark .logo-text {
+  color: var(--white);
+}
+
+nav {
+  display: none;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  nav {
+    display: flex;
+  }
+}
+
+nav a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+.btn-donate {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: var(--primary);
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--white);
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.btn-donate:hover {
+  transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  background-image: linear-gradient(to top, rgba(45, 22, 33, 0.9), rgba(45, 22, 33, 0.3)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDLkIqugW0j2NCeA2lqmQ1L2g0qCQmUs-G8aN6BXOqMpHskIhkbq7XP-ga4OYzvflveoEf1jC5EohFDhTWc1hxOevV1fIORuqPfTlc51PQrdIZQ8FFXLBTYSeyNEC_QK4R5Xli7NRaVj_KxTTeahXG3WeK8I5TWmbE8uiUSXS31KK3H6VM83d8qJPNZT_j6GTgrqeyULcWvohKoQfJ4rV2PZ3LPdoErNqu7FdRmClDS8droiKlN8uYfN5Fo7TOs6lbdYTs_KLMllPvk");
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    min-height: 70vh;
+  }
+}
+
+.hero-content {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+@media (min-width: 640px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 3.75rem;
+  }
+}
+
+.hero p {
+  margin-top: 1.5rem;
+  font-size: 1.125rem;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--stone-200);
+}
+
+@media (min-width: 640px) {
+  .hero p {
+    font-size: 1.25rem;
+  }
+}
+
+.hero .btn-donate {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+}
+
+/* Section Styles */
+section {
+  padding: 4rem 0;
+}
+
+@media (min-width: 640px) {
+  section {
+    padding: 5rem 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  section {
+    padding: 6rem 0;
+  }
+}
+
+.section-alt {
+  background-color: var(--background-light);
+}
+
+html.dark .section-alt {
+  background-color: var(--background-dark);
+}
+
+/* About Section */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.about-content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--stone-900);
+  margin-bottom: 1rem;
+}
+
+html.dark .about-content h2 {
+  color: var(--white);
+}
+
+@media (min-width: 640px) {
+  .about-content h2 {
+    font-size: 1.875rem;
+  }
+}
+
+.about-content p {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+@media (min-width: 640px) {
+  .about-content p {
+    font-size: 1.125rem;
+  }
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.image-grid img {
+  width: 100%;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.image-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Co-founders Section */
+.text-center {
+  text-align: center;
+}
+
+.section-header {
+  max-width: 56rem;
+  margin: 0 auto 3rem;
+}
+
+.section-header h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--stone-900);
+}
+
+html.dark .section-header h2 {
+  color: var(--white);
+}
+
+@media (min-width: 640px) {
+  .section-header h2 {
+    font-size: 2.25rem;
+  }
+}
+
+.section-header p {
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  color: var(--stone-600);
+}
+
+html.dark .section-header p {
+  color: var(--stone-400);
+}
+
+.founders-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .founders-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.founder-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.founder-card img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 9999px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  border: 4px solid rgba(236, 72, 153, 0.5);
+}
+
+.founder-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--stone-900);
+}
+
+html.dark .founder-card h3 {
+  color: var(--white);
+}
+
+.founder-card .role {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.founder-card .bio {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: var(--stone-600);
+  max-width: 24rem;
+}
+
+html.dark .founder-card .bio {
+  color: var(--stone-300);
+}
+
+/* Stories Section */
+.stories-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .stories-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .stories-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.story-card {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+  border: 1px solid rgba(236, 72, 153, 0.2);
+}
+
+html.dark .story-card {
+  background-color: rgba(41, 37, 36, 0.5);
+}
+
+.story-card:hover {
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+}
+
+.story-card .quote {
+  color: var(--stone-700);
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+html.dark .story-card .quote {
+  color: var(--stone-300);
+}
+
+.story-author {
+  display: flex;
+  align-items: center;
+}
+
+.author-initial {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  background-color: rgba(236, 72, 153, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
+
+.author-initial span {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.author-name {
+  font-weight: 700;
+  color: var(--stone-900);
+}
+
+html.dark .author-name {
+  color: var(--white);
+}
+
+/* Blog Section */
+.blog-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+@media (min-width: 1024px) {
+  .blog-layout {
+    flex-direction: row;
+  }
+}
+
+.blog-main {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .blog-main {
+    width: 66.666%;
+  }
+}
+
+.blog-sidebar {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .blog-sidebar {
+    width: 33.333%;
+  }
+}
+
+.blog-header {
+  margin-bottom: 3rem;
+}
+
+.blog-header h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--stone-900);
+  margin-bottom: 0.5rem;
+}
+
+html.dark .blog-header h2 {
+  color: var(--white);
+}
+
+@media (min-width: 640px) {
+  .blog-header h2 {
+    font-size: 2.25rem;
+  }
+}
+
+.blog-header p {
+  font-size: 1.125rem;
+  color: var(--stone-600);
+}
+
+html.dark .blog-header p {
+  color: var(--stone-400);
+}
+
+.blog-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.blog-post {
+  cursor: pointer;
+}
+
+.post-image-wrapper {
+  overflow: hidden;
+  border-radius: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.blog-post img {
+  width: 100%;
+  height: 16rem;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.blog-post:hover img {
+  transform: scale(1.05);
+}
+
+.blog-post h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--stone-900);
+  transition: color 0.3s;
+}
+
+html.dark .blog-post h3 {
+  color: var(--white);
+}
+
+.blog-post:hover h3 {
+  color: var(--primary);
+}
+
+.blog-post h3 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-excerpt {
+  color: var(--stone-600);
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+html.dark .post-excerpt {
+  color: var(--stone-400);
+}
+
+.post-meta {
+  font-size: 0.875rem;
+  color: var(--stone-500);
+}
+
+html.dark .post-meta {
+  color: var(--stone-500);
+}
+
+.post-meta a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.post-meta a:hover {
+  text-decoration: underline;
+}
+
+.sidebar-widgets {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.widget {
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(236, 72, 153, 0.2);
+}
+
+html.dark .widget {
+  background-color: rgba(41, 37, 36, 0.5);
+}
+
+.widget h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--stone-900);
+  margin-bottom: 1rem;
+}
+
+html.dark .widget h3 {
+  color: var(--white);
+}
+
+.search-wrapper {
+  position: relative;
+}
+
+.search-wrapper input {
+  width: 100%;
+  padding: 0.5rem 1rem 0.5rem 2.5rem;
+  border-radius: 9999px;
+  background-color: var(--background-light);
+  border: 1px solid rgba(251, 207, 232, 1);
+  outline: none;
+}
+
+html.dark .search-wrapper input {
+  background-color: var(--background-dark);
+  border-color: rgba(136, 19, 55, 1);
+}
+
+.search-wrapper input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--stone-500);
+}
+
+html.dark .search-icon {
+  color: var(--stone-400);
+}
+
+.categories-list {
+  list-style: none;
+}
+
+.categories-list li {
+  margin-bottom: 0.5rem;
+}
+
+.categories-list a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--stone-600);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+html.dark .categories-list a {
+  color: var(--stone-400);
+}
+
+.categories-list a:hover {
+  color: var(--primary);
+}
+
+.category-count {
+  font-size: 0.75rem;
+  font-weight: 700;
+  background-color: rgba(236, 72, 153, 0.1);
+  color: var(--primary);
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+}
+
+.support-widget {
+  background-color: rgba(236, 72, 153, 0.1);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+html.dark .support-widget {
+  background-color: rgba(236, 72, 153, 0.2);
+}
+
+.support-widget h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--stone-900);
+  margin-bottom: 1rem;
+}
+
+html.dark .support-widget h3 {
+  color: var(--white);
+}
+
+.support-widget p {
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+/* Footer */
+footer {
+  background-color: var(--stone-100);
+  color: var(--stone-600);
+  padding: 4rem 0;
+}
+
+html.dark footer {
+  background-color: var(--stone-900);
+  color: var(--stone-400);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+}
+
+.footer-logo-section {
+  margin-bottom: 1rem;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-logo-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--primary);
+}
+
+.footer-logo h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--stone-900);
+}
+
+html.dark .footer-logo h2 {
+  color: var(--white);
+}
+
+.footer-description {
+  font-size: 0.875rem;
+  line-height: 1.75;
+  max-width: 20rem;
+}
+
+.footer-links-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .footer-links-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.footer-links h3 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--stone-800);
+  margin-bottom: 1rem;
+}
+
+html.dark .footer-links h3 {
+  color: var(--stone-200);
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--primary);
+}
+
+.footer-social h3 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--stone-800);
+  margin-bottom: 1rem;
+}
+
+html.dark .footer-social h3 {
+  color: var(--stone-200);
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.social-icons a {
+  color: var(--stone-500);
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--primary);
+}
+
+.social-icons svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.footer-email {
+  font-size: 0.875rem;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-email:hover {
+  color: var(--primary);
+}
+
+.footer-bottom {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(251, 207, 232, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+html.dark .footer-bottom {
+  border-top-color: rgba(136, 19, 55, 0.5);
+}
+
+@media (min-width: 768px) {
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.footer-bottom p {
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer-bottom p {
+    text-align: left;
+  }
+}
+
+.footer-links-bottom {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.875rem;
+}
+
+.footer-links-bottom a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links-bottom a:hover {
+  color: var(--primary);
+}
+</style>
+</head>
+<body>
+<div>
+<header>
+<div class="container">
+<div class="header-content">
+<div class="logo-section">
+<div class="logo-icon">
+<img src="./images/Orange Modern Africa Connect Icon Logo.png" alt="">
+</div>
+<h2 class="logo-text">AfriGay</h2>
+</div>
+<nav>
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Resources</a>
+<a href="#">Stories</a>
+<a href="#">Blog</a>
+</nav>
+<div>
+<a class="btn-donate" href="#">Donate Now</a>
+</div>
+</div>
+</div>
+</header>
+
+<main>
+<section class="hero">
+<div class="container">
+<div class="hero-content">
+<h1>Connecting LGBTQIA+ People Across Africa</h1>
+<p>Ubuntu is a digital space where LGBTQIA+ Africans can connect, share, and thrive. Our mission is to create a safe and inclusive online community for LGBTQIA+ individuals across the continent.</p>
+<a class="btn-donate" href="#">Donate Now</a>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="about-grid">
+<div class="about-content">
+<h2>About the App</h2>
+<p>Ubuntu is a mobile application designed to foster a sense of community and belonging among LGBTQIA+ Africans. It provides a platform for individuals to connect with peers, access resources, and share their stories in a secure and supportive environment. The app is intended for LGBTQIA+ individuals living in Africa, as well as allies who wish to support the community.</p>
+</div>
+<div class="image-grid">
+<img alt="Community Image 1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE1KGXRke32ArCyb8Tjb6Mj6DIAR4b1aRDg63sCTpRXyHwpvONp8rM7OEVI8t6VTtwS5XnvgwIYg3PP2a17jDdbVJrjtGTsL9Xregh0WL1x3GQIITw7_BhoioW653arOQCgZuoWpQIXRb9KYloanVgz9T3Pq_5tvCoC_fnupiGl-8k-HBYYEHpsuZ8ZAcnxKLuq4_024TzmIa3g6Q0Nwkd9kTq-k5zurB3Aaz5AZK9rW6TTXMPDpUmtvgJTPnKnCasc7Ek9L78Czx1"/>
+<img alt="Community Image 2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNlIQS2xAdzLCERzYPsNotZK58aia0NpMu6K4Jid_aAtx9CnK3KwdCMq4ZU2XCYUVjUYmZlIUwksrd_OmhxrPhRLlppR7LyCjxonQqPpzHMKgMQxOOAuhLO5apgzH073yqAO3EYhtk_LpppVjEryU-7YY0wIkh_knFgFuI6ArWzjGUVXcUEmUIAbn_-TtwOuzsWHErESgFfVL3SSjcGNKQ7iiMXCjhrv1ExAZgf_lVehEBj6EAuianFNzbnF7MDC7-MsxsLgA-S_nc"/>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section-alt">
+<div class="container">
+<div class="section-header text-center">
+<h2>Meet the Co-Founders</h2>
+<p>The passionate individuals behind Ubuntu.</p>
+</div>
+<div class="founders-grid">
+<div class="founder-card">
+<img alt="Co-founder 1" src="./images/f911438d-7c2a-43e9-97da-bf75d6be6f83.JPG"/>
+<h3>Chidinma Adebayo</h3>
+<p class="role">Chief Executive Officer</p>
+<p class="bio">Chidinma is a fierce advocate for LGBTQIA+ rights, bringing years of experience in community organizing and tech innovation to lead the Ubuntu vision.</p>
+</div>
+<div class="founder-card">
+<img alt="Co-founder 2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWYJghwtsGy1SMRqgN1ixH4vdybRdQ-6gMe3g1QGOcTG5YbWSmhiK_xxOgnxofmu3xj7r7BjkPzeWTi-Kr5ol7rJMhTYzDReUP7gM2qN-CUQZgA6FppvkXF_sETQrZJGM81Y1vakSgx7YmZCGsvWIkvmcwjFZQWPy0rYFP6rrGoI3aexzKwnnygpJOpFNVv-fmObgT3kw2FjVScwWjjlOpAjwMo2WQTnOTp730_JKdaB2UUuEJvKeV_OQvTR7MAYtcghZC8kwN9JoL"/>
+<h3>Kwame Owusu</h3>
+<p class="role">Chief Technology Officer</p>
+<p class="bio">Kwame is a brilliant software engineer dedicated to building safe and inclusive digital spaces for marginalized communities across Africa.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-header text-center">
+<h2>Stories of Courage</h2>
+<p>Sharing the experiences of our community. These are stories of struggle, resilience, and hope.</p>
+</div>
+<div class="stories-grid">
+<div class="story-card">
+<p class="quote">"I was forced to flee my home after my family discovered my sexuality. For months, I felt completely alone and scared. Finding a community that accepted me saved my life. We need more spaces like Ubuntu."</p>
+<div class="story-author">
+<div class="author-initial">
+<span>L</span>
+</div>
+<div>
+<p class="author-name">Leo, Uganda</p>
+</div>
+</div>
+</div>
+<div class="story-card">
+<p class="quote">"Being a trans woman in my country is a daily battle. I've faced discrimination in housing, employment, and even from law enforcement. My hope is that Ubuntu can help connect us to resources and legal support."</p>
+<div class="story-author">
+<div class="author-initial">
+<span>Z</span>
+</div>
+<div>
+<p class="author-name">Zhara, Tanzania</p>
+</div>
+</div>
+</div>
+<div class="story-card">
+<p class="quote">"The mental toll of hiding who you are is immense. I struggled with depression for years. It was only when I found other LGBTQIA+ people to talk to that I started to heal. A platform like Ubuntu is desperately needed."</p>
+<div class="story-author">
+<div class="author-initial">
+<span>S</span>
+</div>
+<div>
+<p class="author-name">Sam, Ghana</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section-alt">
+<div class="container">
+<div class="blog-layout">
+<div class="blog-main">
+<div class="blog-header">
+<h2>From Our Blog</h2>
+<p>Latest news, stories, and insights from the Ubuntu community.</p>
+</div>
+<div class="blog-posts" id="blogPosts">
+<p style="text-align: center; color: var(--stone-500);">Loading latest articles...</p>
+</div>
+</div>
+<aside class="blog-sidebar">
+<div class="sidebar-widgets">
+<div class="widget">
+<h3>Search</h3>
+<div class="search-wrapper">
+<input placeholder="Search articles..." type="text"/>
+<div class="search-icon">
+<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+</div>
+<div class="widget">
+<h3>Categories</h3>
+<ul class="categories-list">
+<li><a href="#"><span>Community</span> <span class="category-count">12</span></a></li>
+<li><a href="#"><span>Activism</span> <span class="category-count">8</span></a></li>
+<li><a href="#"><span>Health & Wellness</span> <span class="category-count">5</span></a></li>
+<li><a href="#"><span>Arts & Culture</span> <span class="category-count">7</span></a></li>
+<li><a href="#"><span>Personal Stories</span> <span class="category-count">15</span></a></li>
+</ul>
+</div>
+<div class="support-widget">
+<h3>Support Our Work</h3>
+<p>Your donation helps us amplify LGBTQIA+ voices across Africa.</p>
+<a class="btn-donate" href="#">Donate Now</a>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container">
+<div class="footer-grid">
+<div class="footer-logo-section">
+<div class="footer-logo">
+<div class="footer-logo-icon">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2>Ubuntu</h2>
+</div>
+<p class="footer-description">A digital space where LGBTQIA+ Africans can connect, share, and thrive.</p>
+</div>
+<div class="footer-links-grid">
+<div class="footer-links">
+<h3>Quick Links</h3>
+<ul>
+<li><a href="#">About Us</a></li>
+<li><a href="#">Our Mission</a></li>
+<li><a href="#">Stories</a></li>
+<li><a href="#">Blog</a></li>
+</ul>
+</div>
+<div class="footer-links">
+<h3>Resources</h3>
+<ul>
+<li><a href="#">Support Groups</a></li>
+<li><a href="#">Mental Health</a></li>
+<li><a href="#">Legal Aid</a></li>
+<li><a href="#">Helplines</a></li>
+</ul>
+</div>
+<div class="footer-links">
+<h3>Get Involved</h3>
+<ul>
+<li><a href="#">Donate</a></li>
+<li><a href="#">Volunteer</a></li>
+<li><a href="#">Share Your Story</a></li>
+<li><a href="#">Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-social">
+<h3>Connect With Us</h3>
+<div class="social-icons">
+<a href="#">
+<svg fill="currentColor" viewBox="0 0 24 24">
+<path d="M22.46,6.54a.75.75,0,0,0-.94-.2l-3.32.9a5.21,5.21,0,0,0-3.6-2.12,5,5,0,0,0-4.6,3.23,5.18,5.18,0,0,0-1.42,3.71V12c-4-1.2-7.2-4.4-7.3-4.5a.75.75,0,0,0-1.28.45c-.4,4.4,1.8,7.4,4.1,9.1a11.1,11.1,0,0,0,2,2.3c-1.4,1.6-3.7,2.5-3.7,2.5a.75.75,0,0,0-.36,1.1c.07.1,3,4.6,10.2,4.6,6.6,0,12.1-5.1,12.7-11.6l2.8-2.8a.75.75,0,0,0-.17-1.07ZM18,9a.75.75,0,0,0,0-.14c-.4-4.8-5-8.5-9.4-8.5-1,0-1.7,0-2.3.3C7.5,2.1,9,4.2,9.8,6a.75.75,0,0,0,.7.5c.2,0,.4-.1.6-.2C15,4,17.9,5.4,18.4,9a.75.75,0,0,0,.3.6l.3.2Z"></path>
+</svg>
+</a>
+<a href="#">
+<svg fill="currentColor" viewBox="0 0 24 24">
+<path d="M12,8a4,4,0,1,0,4,4A4,4,0,0,0,12,8Zm0,6a2,2,0,1,1,2-2A2,2,0,0,1,12,14Zm6.5-7.5a1.5,1.5,0,1,1-1.5-1.5A1.5,1.5,0,0,1,18.5,6.5Zm4.2,1.3A6.5,6.5,0,0,0,18,2.3a6.5,6.5,0,0,0-5.2-1.8H11.2A6.5,6.5,0,0,0,6,2.3,6.5,6.5,0,0,0,1.3,7.8,6.5,6.5,0,0,0,.5,12.8v.4A6.5,6.5,0,0,0,2.3,18,6.5,6.5,0,0,0,7.8,22.7a6.5,6.5,0,0,0,5.2,1.8h.4a6.5,6.5,0,0,0,5.2-1.8A6.5,6.5,0,0,0,22.7,18a6.5,6.5,0,0,0,1.8-5.2V11.2A6.5,6.5,0,0,0,22.7,7.8ZM21,18a4.5,4.5,0,0,1-4.5,4.5H7.5A4.5,4.5,0,0,1,3,18V7.5A4.5,4.5,0,0,1,7.5,3h9A4.5,4.5,0,0,1,21,7.5Z"></path>
+</svg>
+</a>
+<a href="#">
+<svg fill="currentColor" viewBox="0 0 24 24">
+<path d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm1,17.6V13h2.5a.5.5,0,0,0,0-1H13V9a1,1,0,0,1,1-1h1.5a.5.5,0,0,0,0-1H14a2,2,0,0,0-2,2v2H10.5a.5.5,0,0,0,0,1H12v6.6a8,8,0,1,1,1,0Z"></path>
+</svg>
+</a>
+</div>
+<a class="footer-email" href="mailto:support@ubuntuapp.org">support@ubuntuapp.org</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p>©️ 2023 Ubuntu. All Rights Reserved. A project by the Pan-African Queer Collective.</p>
+<div class="footer-links-bottom">
+<a href="#">Privacy Policy</a>
+<a href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+
+<script>
+// Fetch blog posts from NewsAPI
+async function fetchBlogPosts() {
+  const blogContainer = document.getElementById('blogPosts');
+  const apiKey = 'acc0dd3521278957c0f3bb7a1966ee75';
+  const apiUrl = `https://newsapi.org/v2/everything?q=LGBTQ+Africa&sortBy=publishedAt&pageSize=6&apiKey=${apiKey}`;
+
+  try {
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+
+    if (data.status === 'ok' && data.articles && data.articles.length > 0) {
+      blogContainer.innerHTML = '';
+
+      // Display first 2 articles
+      data.articles.slice(0, 2).forEach(article => {
+        const publishedDate = new Date(article.publishedAt).toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+
+        const articleHTML = `
+          <article class="blog-post">
+            <div class="post-image-wrapper">
+              <img alt="${article.title}" src="${article.urlToImage || 'https://via.placeholder.com/800x400?text=No+Image'}" onerror="this.src='https://via.placeholder.com/800x400?text=No+Image'"/>
+            </div>
+            <h3><a href="${article.url}" target="_blank">${article.title}</a></h3>
+            <p class="post-excerpt">${article.description || 'Read more about this story...'}</p>
+            <div class="post-meta">
+              <span>By <a href="${article.url}" target="_blank">${article.author || article.source.name}</a></span> |
+              <span>${publishedDate}</span> |
+              <a href="${article.url}" target="_blank">Read More</a>
+            </div>
+          </article>
+        `;
+
+        blogContainer.innerHTML += articleHTML;
+      });
+    } else {
+      blogContainer.innerHTML = '<p style="text-align: center; color: var(--stone-500);">No articles found. Please check back later.</p>';
+    }
+  } catch (error) {
+    console.error('Error fetching blog posts:', error);
+    blogContainer.innerHTML = '<p style="text-align: center; color: var(--stone-500);">Unable to load articles at this time. Please try again later.</p>';
+  }
+}
+
+// Load blog posts when page loads
+document.addEventListener('DOMContentLoaded', fetchBlogPosts);
+</script>
+
+</body>
+</html>

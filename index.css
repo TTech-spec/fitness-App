@@ -1,0 +1,8 @@
+/* Existing styles may be here */
+
+/* Logo icon image fit */
+.logo-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
